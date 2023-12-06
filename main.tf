@@ -19,3 +19,8 @@ module "services_servers" {
   public_subnets    = module.vpc.public_subnets
   security_group_id = module.security.security_group_id
 }
+
+module "databases" {
+  source = "./modules/databases"
+
+}

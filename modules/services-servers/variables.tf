@@ -15,8 +15,3 @@ variable "security_group_id" {
   type        = list(string)
   description = "A list of security group IDs to apply to the instances"
 }
-
-variable  "database_names" {
-type = list(string)
-default = ["lighting", "heating"]
-}
