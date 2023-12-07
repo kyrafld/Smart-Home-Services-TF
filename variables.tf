@@ -18,7 +18,7 @@ variable "instance_type" {
 }
 
 variable "service_names" {
-  type    = list(string)
+  type = list(string)
 }
 
 
