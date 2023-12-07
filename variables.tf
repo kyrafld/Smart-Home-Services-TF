@@ -16,3 +16,16 @@ variable "azs" {
 variable "instance_type" {
   type = string
 }
+
+variable "service_names" {
+  type    = list(string)
+}
+
+
+variable "key_name" {
+  type = string
+}
+
+variable "path" {
+  type = list(string)
+}

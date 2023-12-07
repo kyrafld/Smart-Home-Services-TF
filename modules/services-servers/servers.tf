@@ -9,7 +9,7 @@ resource "aws_instance" "services_servers" {
 
   vpc_security_group_ids      = var.security_group_id
   associate_public_ip_address = true
-  key_name                    = "kyraskey"
+  key_name                    = var.key_name
 
 }
 
