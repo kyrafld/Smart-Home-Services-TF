@@ -14,6 +14,7 @@ module "services_servers" {
   source            = "./modules/services-servers"
   instance_type     = var.instance_type
   public_subnets    = module.vpc.public_subnets
+  service_names     = var.service_names
   security_group_id = module.security.security_group_id
   key_name          = var.key_name
 }
