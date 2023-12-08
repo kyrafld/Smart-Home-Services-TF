@@ -1,13 +1,12 @@
-variable "vpc_id"{
-    type = string
+variable "vpc_id" {
+  type = string
 }
 
 variable "instance_id" {
-    type = list(string)
+  type = list(string)
 }
 variable "security_group_id" {
-  type        = list(string)
-  description = "A list of security group IDs to apply to the instances"
+  type = list(string)
 }
 
 variable "public_subnets" {
@@ -19,5 +18,6 @@ variable "path" {
 }
 
 variable "service_names" {
-  type    = list(string)
+  type        = list(string)
+  description = "A list of the service names to be applied to each target group"
 }

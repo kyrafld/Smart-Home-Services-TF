@@ -17,6 +17,7 @@ module "services_servers" {
   service_names     = var.service_names
   security_group_id = module.security.security_group_id
   key_name          = var.key_name
+  ami_img           = var.ami_img
 }
 
 module "databases" {

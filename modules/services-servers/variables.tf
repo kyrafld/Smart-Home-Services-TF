@@ -3,7 +3,8 @@ variable "instance_type" {
 }
 
 variable "service_names" {
-  type    = list(string)
+  type = list(string)
+
 }
 
 variable "public_subnets" {
@@ -17,4 +18,8 @@ variable "security_group_id" {
 
 variable "key_name" {
   type = string
+}
+
+variable "ami_img" {
+  type = list(string)
 }

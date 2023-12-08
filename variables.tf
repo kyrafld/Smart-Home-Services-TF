@@ -13,19 +13,27 @@ variable "azs" {
   description = "A list of the Availability Zones you wish to provision infrastructure in"
 }
 
+variable "ami_img" {
+  type        = list(string)
+  description = "A list of the Amazon Machine Images(AMI)"
+}
+
 variable "instance_type" {
-  type = string
+  type        = string
+  description = "The type of instance to be applied "
 }
 
 variable "service_names" {
-  type = list(string)
+  type        = list(string)
+  description = "A list of the different services names to apply to each server"
 }
 
-
 variable "key_name" {
-  type = string
+  type        = string
+  description = "The key_name available to access the servers "
 }
 
 variable "path" {
-  type = list(string)
+  type        = list(string)
+  description = "A list of the different paths"
 }

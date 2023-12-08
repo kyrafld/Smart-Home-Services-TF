@@ -1,6 +1,6 @@
 resource "aws_instance" "services_servers" {
-  count         = length(var.service_names)
-  ami           = data.aws_ami.ubuntu.id
+  count         = length(var.ami_img)
+  ami           = var.ami_img[count.index]
   instance_type = var.instance_type
   subnet_id     = var.public_subnets[count.index]
   tags = {
