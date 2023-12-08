@@ -33,3 +33,14 @@ module "load_balancing" {
   path              = var.path
   service_names     = var.service_names
 }
+
+module "autoscaling" {
+  source            = "./modules/autoscaling"
+  ami_img           = var.ami_img
+  instance_type     = var.instance_type
+  security_group_id = module.security.security_group_id
+  azs               = var.azs
+  public_subnets    = module.vpc.public_subnets
+  load_balancing    = module.load_balancing.load_balancing
+  service_names     = var.service_names
+}

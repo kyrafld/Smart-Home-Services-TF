@@ -1,8 +1,12 @@
-variable "vpc_id" {
+variable "ami_img" {
+  type = list(string)
+}
+
+variable "instance_type" {
   type = string
 }
 
-variable "instance_id" {
+variable "azs" {
   type = list(string)
 }
 
@@ -14,11 +18,10 @@ variable "public_subnets" {
   type = list(string)
 }
 
-variable "path" {
+variable "load_balancing" {
   type = list(string)
 }
 
 variable "service_names" {
-  type        = list(string)
-  description = "A list of the service names to be applied to each target group"
+  type = list(string)
 }

@@ -37,3 +37,4 @@ variable "path" {
   type        = list(string)
   description = "A list of the different paths"
 }
+

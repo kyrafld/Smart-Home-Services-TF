@@ -1,5 +1,5 @@
 resource "aws_vpc" "main_vpc" {
-  cidr_block                    = var.cidr_range
+  cidr_block           = var.cidr_range
   enable_dns_hostnames = true
 
   tags = {
