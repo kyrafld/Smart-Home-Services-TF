@@ -6,5 +6,8 @@ instance_type   = "t3.micro"
 service_names   = ["lighting", "heating", "status"]
 key_name        = "kyraskey"
 path            = ["lights", "heating", "status"]
+desired_capacity = "2"
+min_size = "1"
+max_size = "2"
 
 

@@ -4,7 +4,6 @@ variable "instance_type" {
 
 variable "service_names" {
   type = list(string)
-
 }
 
 variable "public_subnets" {

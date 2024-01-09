@@ -1,5 +1,5 @@
-resource "aws_vpc" "main_vpc" {
-  cidr_block                    = var.cidr_range
+resource "aws_vpc" "smart_home" {
+  cidr_block           = var.cidr_range
   enable_dns_hostnames = true
 
   tags = {
@@ -10,27 +10,28 @@ resource "aws_vpc" "main_vpc" {
 resource "aws_subnet" "public_subnets" {
   count = length(var.public_subnets)
 
-  vpc_id            = aws_vpc.main_vpc.id
-  availability_zone = var.azs[count.index]
-  cidr_block        = var.public_subnets[count.index]
-
+  vpc_id                  = aws_vpc.smart_home.id
+  availability_zone       = var.azs[count.index]
+  cidr_block              = var.public_subnets[count.index]
+  map_public_ip_on_launch = true
 }
 
 resource "aws_subnet" "private_subnets" {
   count = length(var.private_subnets)
 
-  vpc_id            = aws_vpc.main_vpc.id
+  vpc_id            = aws_vpc.smart_home.id
   availability_zone = var.azs[count.index]
   cidr_block        = var.private_subnets[count.index]
+
 
 }
 
 resource "aws_internet_gateway" "igw" {
-  vpc_id = aws_vpc.main_vpc.id
+  vpc_id = aws_vpc.smart_home.id
 }
 
 resource "aws_route_table" "public" {
-  vpc_id = aws_vpc.main_vpc.id
+  vpc_id = aws_vpc.smart_home.id
 
   route {
     cidr_block = "0.0.0.0/0"

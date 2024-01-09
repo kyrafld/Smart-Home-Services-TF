@@ -5,6 +5,7 @@ variable "vpc_id" {
 variable "instance_id" {
   type = list(string)
 }
+
 variable "security_group_id" {
   type = list(string)
 }
@@ -18,6 +19,5 @@ variable "path" {
 }
 
 variable "service_names" {
-  type        = list(string)
-  description = "A list of the service names to be applied to each target group"
+  type = list(string)
 }

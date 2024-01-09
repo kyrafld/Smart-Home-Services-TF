@@ -37,3 +37,18 @@ variable "path" {
   type        = list(string)
   description = "A list of the different paths"
 }
+
+variable "desired_capacity" {
+  type        = number
+  description = "The desired capacity for autoscaling groups"
+}
+
+variable "min_size" {
+  type        = number
+  description = "The desired minium size for autoscaling groups "
+}
+
+variable "max_size" {
+  type        = number
+  description = "The desired maxium size for autoscaling groups "
+}
