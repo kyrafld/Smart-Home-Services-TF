@@ -87,6 +87,7 @@ git --version
 ## Modules
 
 ### 1. Networking 
+Networking is where the Virtual Private Cloud(VPC) is created with specified configurations to establish and secure isolated network environment. The infrasturce is design to support public and private subnets across multiple Availability Zones. 
 #### Variables
 - `vpc_name`: The name of the Virtual Private Cloud(VPC).
 - `cidr_range`: The CIDR range for the VPC.
@@ -106,6 +107,7 @@ git --version
 - `security_groups`: A list of security groups associated with the insfrastuce.
 
 ### 3. Services Servers 
+Service servers involves the creation of the Amazong Elastic Compute Cloud(EC2) instances to host multiple services. Each EC2 instance is configure with specific parameters. 
 #### Variables
 - `instance_type`: The type of instance to be applied.
 - `service_names`: A list of the different services names to apply to each server.
@@ -119,11 +121,13 @@ git --version
 - `instance_id`: The id of the instance created. 
 
 
-### 4. DynamboDB
+### 4. Databases
+The Databases module focuses on the creation of DynamboDB databases, configuring each database with a different instance ids to meet specific requirements.
 #### Variables
 - `database_names`: A list of the names of the DynamoDB database. 
 
 ### 5. Load Balancing 
+The Load Balncing module is designed to manage the distubution of incoming traffic among Amazon Elastic Compute Cloud (EC2) instances with the Virtual Private Cloud(VPC). This is imperative for enhancing the availability and fault tolerance of the system.
 #### Variables
 - `vpc_id`: The ID of the created VPC.
 - `instance_id`: The id of the instance created. 
@@ -136,6 +140,7 @@ git --version
 - `smart_home_tg_arns`:  A list of Amazon Resource Name(ARNs) for the target groups associated with the Smart Home application. 
 
 ### 6. Autoscaling
+The Autoscaloing module focuses on automatically adjusting the number of Amazon Elastic Compute Cloud (EC2) instances based on demand, to ensure optiomal perfomance. 
 #### Variables
 - `service_names`: A list of the different services names to apply to each server.
 - `ami_img`: A list of the Amazon Machine Images(AMI).
