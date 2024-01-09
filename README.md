@@ -52,7 +52,7 @@ AWS_SECRET_ACCESS_KEY: Your AWS secret key.
 AWS_DEFAULT_REGION: Your preferred AWS region.
 AWS_DEFAULT_OUTPUT: (Optional) Your preferred AWS CLI output format (e.g., json).
 ```
-#### 3. Git (Optional)
+#### Git (Optional)
 If you clone this repository, you will need to have Git installed locally. You can download Git from the [official Git website](https://git-scm.com/downloads)
 
 To check if Git is installed, run the following command in your terminal:
