@@ -10,8 +10,6 @@
    3. [Load Balancing](#load-balancing)
    4. [Networking](#networking)
    5. [Services Servers](#services-servers)
-- [Usage](#usage)
-- [Customisation](#customisation)
 
 
 ## Overview
@@ -151,9 +149,3 @@ The Autoscaloing module focuses on automatically adjusting the number of Amazon 
 - `min_size`: The minimum number of instances in the autoscaling group.
 - `max_size`: The maximum number of instances in the autoscaling group.
 - `public_subnets_ids`: A list of IDs for the public subnets.
-
-
-## Usage
-
-
-## Customisation
